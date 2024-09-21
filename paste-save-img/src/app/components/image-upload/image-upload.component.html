@@ -1,0 +1,20 @@
+
+<div>
+    <div class="upload-container" (paste)="onPaste($event)">
+      <div class="placeholder" >
+        <p>Press CTRL+V to paste your screenshot to the canvas</p>
+      </div>
+      <canvas #canvas width="500" height="400" class="canvas"></canvas>
+      <button (click)="saveImage()">Save</button>
+    </div>
+   @if(imageSrc){
+    <div class="ss-uploaded">
+      <div>
+        <img [src]="imageSrc" alt="">
+      </div>
+  </div>
+  }
+</div>
+
+    <!--
+    -->
